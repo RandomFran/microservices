@@ -15,7 +15,7 @@ import com.example.carservice.entity.Car;
 import com.example.carservice.service.CarService;
 
 @RestController
-@RequestMapping("car")
+@RequestMapping("/car")
 public class CarController {
 
 	@Autowired
@@ -56,8 +56,6 @@ public class CarController {
 	public ResponseEntity<List<Car>> getByUserId(@PathVariable("userId") int userId) {
 
 		List<Car> cars = carService.byUserId(userId);
-		if (cars.isEmpty())
-			return ResponseEntity.noContent().build();
 
 		return ResponseEntity.ok(cars);
 

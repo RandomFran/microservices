@@ -13,4 +13,6 @@ public class Bike {
 
 	private String model;
 
+	private int userId;
+
 }

@@ -55,8 +55,6 @@ public class BikeController {
 	public ResponseEntity<List<Bike>> getByUserId(@PathVariable("userId") int userId) {
 
 		List<Bike> bikes = bikeService.byUserId(userId);
-		if (bikes.isEmpty())
-			return ResponseEntity.noContent().build();
 
 		return ResponseEntity.ok(bikes);
 
