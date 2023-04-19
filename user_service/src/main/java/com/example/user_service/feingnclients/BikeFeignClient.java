@@ -15,10 +15,10 @@ import com.example.user_service.model.Bike;
 //@RequestMapping("/car")
 public interface BikeFeignClient {
 
-	@PostMapping
+	@PostMapping("/bike")
 	Bike save(@RequestBody Bike bike);
 
-	@GetMapping("/byuser/{userId}")
+	@GetMapping("/bike/byuser/{userId}")
 	List<Bike> getBikes(@PathVariable("userId") int userId);
 
 }
